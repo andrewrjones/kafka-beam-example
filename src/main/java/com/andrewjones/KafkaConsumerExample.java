@@ -28,6 +28,9 @@ public class KafkaConsumerExample {
 
                 .updateConsumerProperties(ImmutableMap.of("auto.offset.reset", (Object)"earliest"))
 
+                // We're writing to a file, which does not support unbounded data sources. This line makes it bounded to
+                // the first 5 records.
+                // In reality, we would likely be writing to a data source that supports unbounded data, such as BigQuery.
                 .withMaxNumRecords(5)
 
                 .withoutMetadata() // PCollection<KV<Long, String>>
