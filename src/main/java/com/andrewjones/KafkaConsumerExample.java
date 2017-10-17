@@ -21,7 +21,7 @@ public class KafkaConsumerExample {
         Pipeline p = Pipeline.create(options);
 
         p.apply(KafkaIO.<Long, String>read()
-                .withBootstrapServers("localhost:29092")
+                .withBootstrapServers("kafka:29092")
                 .withTopic("words")
                 .withKeyDeserializer(LongDeserializer.class)
                 .withValueDeserializer(StringDeserializer.class)

@@ -39,7 +39,7 @@ public class KafkaProducerValuesExample {
 
         PCollection<String> input = p.apply(Create.of(WORDS).withCoder(StringUtf8Coder.of()));
         input.apply(KafkaIO.<Void, String>write()
-                .withBootstrapServers("localhost:29092")
+                .withBootstrapServers("kafka:29092")
                 .withTopic("words")
                 .withValueSerializer(StringSerializer.class)
                 .values()

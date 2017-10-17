@@ -31,7 +31,7 @@ public class KafkaProducerExample {
                 .apply(Create.of(kvs));
 
         input.apply(KafkaIO.<Long, String>write()
-                .withBootstrapServers("localhost:29092")
+                .withBootstrapServers("kafka:29092")
                 .withTopic("words")
 
                 .withKeySerializer(LongSerializer.class)
