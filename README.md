@@ -1,6 +1,6 @@
 # Investigating using Apache Beam with Apache Kafka
 
-* Start Kafka
+* Start Kafka and Zookeeper
     * `make up`
 * Create the Kafka topic
     * `make topic`
@@ -16,5 +16,7 @@
     * `make consumer`
 * Check output
     * `cat wordcount*`
+* Stop Kafka and Zookeeper
+    * `make down`
 * Clean up
     * `make clean`

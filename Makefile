@@ -7,8 +7,14 @@ RUNNER=direct-runner
 up:
 	docker-compose up
 
+upd:
+	docker-compose up -d
+
 fup:
 	docker-compose up --force-recreate
+
+down:
+	docker-compose down
 
 topic:
 	docker-compose exec kafka kafka-topics --create --topic $(TOPIC) --partitions 1 --replication-factor 1 --if-not-exists --zookeeper $(ZOOKEEPER)
