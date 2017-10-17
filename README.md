@@ -1,20 +1,20 @@
 # Investigating using Apache Beam with Apache Kafka
 
 * Start Kafka
-** `make up`
+    * `make up`
 * Create the Kafka topic
-** `make topic`
+    * `make topic`
 * Ensure it has been created
-** `make describe`
+    * `make describe`
 * Use Beam to write to topic
-** `make producer`
+    * `make producer`
 * Check messages in topic
-** `make offset`
+    * `make offset`
 * Dump messages from topic
-** `make dump`
+    * `make dump`
 * Consume messages and run wordcount with Beam
-** `make consumer`
+    * `make consumer`
 * Check output
-** `cat wordcount*`
+    * `cat wordcount*`
 * Clean up
-** `make clean`
+    * `make clean`
