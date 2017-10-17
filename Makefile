@@ -26,7 +26,7 @@ offset:
 	docker-compose exec kafka kafka-run-class kafka.tools.GetOffsetShell --broker-list $(KAFKA) --topic $(TOPIC) --time -1
 
 dump:
-	docker-compose exec kafka kafka-console-consumer --bootstrap-server $(KAFKA) --topic $(TOPIC) --new-consumer --from-beginning --max-messages 10
+	docker-compose exec kafka kafka-console-consumer --bootstrap-server $(KAFKA) --topic $(TOPIC) --new-consumer --from-beginning --max-messages 5
 
 producer:
 	docker-compose run beam mvn compile exec:java -Dexec.mainClass=com.andrewjones.KafkaProducerExample -P$(RUNNER)
