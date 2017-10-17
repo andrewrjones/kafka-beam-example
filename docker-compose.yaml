@@ -17,7 +17,6 @@ services:
   beam:
     image: maven:3.5-jdk-8
     command: mvn compile
-#    command: mvn compile exec:java -Dexec.mainClass=com.andrewjones.KafkaProducerExample -Pdirect-runner
     volumes:
       - .:/usr/src/kafka
       - $HOME/.m2:/root/.m2
