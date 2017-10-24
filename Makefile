@@ -1,6 +1,6 @@
 TOPIC=words
-ZOOKEEPER=localhost:32181
-KAFKA=localhost:29092
+ZOOKEEPER=zookeeper:32181
+KAFKA=kafka:29092
 
 RUNNER=direct-runner
 
